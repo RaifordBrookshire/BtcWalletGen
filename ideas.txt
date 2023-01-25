@@ -1,0 +1,46 @@
+
+
+Write a README.md file describing a C# .net 7.0 console CLI tool that generates a Bitcoin Address and console writes the results to the console. This README.md file should follow best practices and easy to read. The console tool cli will creaate the Bitcoin keys and public addresses using NBitcoin class library (install from Nuget with example of command to install). Here are some things to include.
+
+Explain the importance of generating Crypto Wallets in an offline environment and securly store the 12 word mnumonic in a safe secure place such as a password manager such as KeePass (KeePass is completely offline with encryption... explain this).
+
+The output of the program will dump the following output: (explain each data point)
+-
+    BIP39 Mnumonic: monster clarify club caution winter december daring hotel margin gain exclude dinosaur
+    BIP39 Seed: 7a3f39512df69ea54814b418e3facfd63baf58765c7e1867b875e6790b6f28fe70c278fc53aa6d4ccacdee114b2553c4613c2b466a1c4967f8231c5bfef50bf1
+    BIP32 RootKey: xprv9s21ZrQH143K4D1D7ngxjz4B4zUQXFcWhhwAnSG2dG39earJ1fQQQLRStr3eBGWmjM86XZa8P5fXUePEZqkxncYjxhj2C4e4pQKCKJx3AMk
+    BIP32 DerivationPath: m/44'/0'/0'/0
+    BIP32 ExtPubKey: xprv9zvqiGcFuDdK3zSFfRqRiEv9Qu8aXHY6WCNMHf5Emb3RjZNbG2VjbByaBcKo6TJ54mCBjwpKAMy26oY6J24nAKsVJ7MB8E8Rveapbax3ntF
+    BIP32 ExtPubKey: xpub6DvC7n99jbBcGUWimTNS5Nrsxvy4vkFwsRHx63UrKvaQcMhjoZoz8zJ42tLbssz1CTHxLAkmqU3z84DFASCaJojKFziwx6fzrkQGp6LudUN
+
+Then display a list of derived public address in the format:
+
+PATH       	ADDRESS               		PUBLIC KEY                             					   PRIVATE KEY
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+m/44'/0'/0'/0/0	1EFJ6V2faD7UVfjuVH8Q1dHLxvwuVuW3hF	0309a8630c60d8b51fddbc392a0e4ad3de07c6928a434d4eb38e73b21ee1389057 L5hziKTFhoPKykpUHYji1gQMkKwmd1ZqwLv5nswtFEuEw2Xqbxva
+m/44'/0'/0'/0/1	18D44FdmxzHd24si4gE6Xf2H4m8w2PnUcY	03ad9ae83c24f8d7e4ec4b127151c097068923051dd8643d93ef9a926dc1fb38a7 KzxNiTMUSMnQC5ZMo1BYtKU9Xi3Nc68vB36bMotMfoDcwVyj7uE7
+m/44'/0'/0'/0/2	1AL5GXiKw6pcHaZHuq2FeWWkvzQoyep3i1	023bf016efae1b7671216a0d1fa7d6f2ce7ab77ded26ab1489411a6dc7938d9634 L1KvAXxvph3FmNVgDPVQNhVYuq5ap1htFmkUD2tAFnw41xVQagyA
+
+Include a code section show how you use the command like this:     (code)    BtcKeyGenerator
+
+
+
+Write me a c# console application in .net 6.0 that will generate a single 12 word passphrase with unlimted bitcoin private key, public key, public address items. This program should use NBitcoin C# library. This program should use BIP44 as a derivation path.  This program should print results to the console in the following output format:
+
+BIP39 Mnumonic: monster clarify club caution winter december daring hotel margin gain exclude dinosaur
+BIP39 Seed: 7a3f39512df69ea54814b418e3facfd63baf58765c7e1867b875e6790b6f28fe70c278fc53aa6d4ccacdee114b2553c4613c2b466a1c4967f8231c5bfef50bf1
+BIP32 RootKey: xprv9s21ZrQH143K4D1D7ngxjz4B4zUQXFcWhhwAnSG2dG39earJ1fQQQLRStr3eBGWmjM86XZa8P5fXUePEZqkxncYjxhj2C4e4pQKCKJx3AMk
+BIP32 DerivationPath: m/44'/0'/0'/0
+BIP32 ExtPubKey: xprv9zvqiGcFuDdK3zSFfRqRiEv9Qu8aXHY6WCNMHf5Emb3RjZNbG2VjbByaBcKo6TJ54mCBjwpKAMy26oY6J24nAKsVJ7MB8E8Rveapbax3ntF
+BIP32 ExtPubKey: xpub6DvC7n99jbBcGUWimTNS5Nrsxvy4vkFwsRHx63UrKvaQcMhjoZoz8zJ42tLbssz1CTHxLAkmqU3z84DFASCaJojKFziwx6fzrkQGp6LudUN
+
+PATH       	ADDRESS               		PUBLIC KEY                             					   PRIVATE KEY
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+m/44'/0'/0'/0/0	1EFJ6V2faD7UVfjuVH8Q1dHLxvwuVuW3hF	0309a8630c60d8b51fddbc392a0e4ad3de07c6928a434d4eb38e73b21ee1389057 L5hziKTFhoPKykpUHYji1gQMkKwmd1ZqwLv5nswtFEuEw2Xqbxva
+m/44'/0'/0'/0/1	18D44FdmxzHd24si4gE6Xf2H4m8w2PnUcY	03ad9ae83c24f8d7e4ec4b127151c097068923051dd8643d93ef9a926dc1fb38a7 KzxNiTMUSMnQC5ZMo1BYtKU9Xi3Nc68vB36bMotMfoDcwVyj7uE7
+m/44'/0'/0'/0/2	1AL5GXiKw6pcHaZHuq2FeWWkvzQoyep3i1	023bf016efae1b7671216a0d1fa7d6f2ce7ab77ded26ab1489411a6dc7938d9634 L1KvAXxvph3FmNVgDPVQNhVYuq5ap1htFmkUD2tAFnw41xVQagyA
+m/44'/0'/0'/0/3	1N1xCVAnqowX5Sqw62XAJNY8hy9UdBNADW	03bca02150989cc533b5e55d970ef5db125e958ad7e0c084aa46feb648818157fb KwPK4byD89cyzHGWEwt2eP5d8UBZvDX2DisLZsSXZJ2zuP16YTMK
+m/44'/0'/0'/0/4	1EFJ6V2faD7UVfjuVH8Q1dHLxvwuVuW3hF	0309a8630c60d8b51fddbc392a0e4ad3de07c6928a434d4eb38e73b21ee1389057 L5hziKTFhoPKykpUHYji1gQMkKwmd1ZqwLv5nswtFEuEw2Xqbxva
+m/44'/0'/0'/0/5	18D44FdmxzHd24si4gE6Xf2H4m8w2PnUcY	03ad9ae83c24f8d7e4ec4b127151c097068923051dd8643d93ef9a926dc1fb38a7 KzxNiTMUSMnQC5ZMo1BYtKU9Xi3Nc68vB36bMotMfoDcwVyj7uE7
+m/44'/0'/0'/0/6	1AL5GXiKw6pcHaZHuq2FeWWkvzQoyep3i1	023bf016efae1b7671216a0d1fa7d6f2ce7ab77ded26ab1489411a6dc7938d9634 L1KvAXxvph3FmNVgDPVQNhVYuq5ap1htFmkUD2tAFnw41xVQagyA
+m/44'/0'/0'/0/7	1N1xCVAnqowX5Sqw62XAJNY8hy9UdBNADW	03bca02150989cc533b5e55d970ef5db125e958ad7e0c084aa46feb648818157fb KwPK4byD89cyzHGWEwt2eP5d8UBZvDX2DisLZsSXZJ2zuP16YTMK
